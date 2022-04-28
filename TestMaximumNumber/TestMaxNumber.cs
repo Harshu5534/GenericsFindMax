@@ -14,18 +14,39 @@ namespace TestMaximum
             Assert.AreEqual(actual, 3);
         }
         [Test]
-        public void GivenMaxNumInPositionOne_WhenTestMax_ShouldReturnMaximum()
+        public void GivenMaxNumIntPositionOne_WhenTestMax_ShouldReturnMaximum()
         {
             FindMaximum max = new FindMaximum();
             int actual = max.FindMaxInteger(3, 1, 2);
             Assert.AreEqual(actual, 3);
         }
         [Test]
-        public void GivenMaxNumInPositionTwo_WhenTestMax_ShouldReturnMaximum()
+        public void GivenMaxNumIntPositionTwo_WhenTestMax_ShouldReturnMaximum()
         {
             FindMaximum max = new FindMaximum();
             int actual = max.FindMaxInteger(1, 3, 2);
             Assert.AreEqual(actual, 3);
+        }
+        [Test]
+        public void GivenFloatInput_WhenTestMax_ShouldReturnMaximum()
+        {
+            FindMaximum max = new FindMaximum();
+            float actual = max.FindMaxFloat(1.2f, 3.6f, 6.7f);
+            Assert.AreEqual(actual,6.7f);
+        }
+        [Test]
+        public void GivenMaxNumfloatPositionOne_WhenTestMax_ShouldReturnMaximum()
+        {
+            FindMaximum max = new FindMaximum();
+            float actual = max.FindMaxFloat(6.7f, 1.2f, 3.6f);
+            Assert.AreEqual(actual, 6.7f);
+        }
+        [Test]
+        public void GivenMaxNumfloatPositionTwo_WhenTestMax_ShouldReturnMaximum()
+        {
+            FindMaximum max = new FindMaximum();
+            float actual = max.FindMaxFloat(1.2f,6.7f,3.6f);
+            Assert.AreEqual(actual, 6.7f);
         }
 
     }
