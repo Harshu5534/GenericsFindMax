@@ -17,7 +17,7 @@ namespace FindMaximumNumber
             }
             if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0)
             {
-                Console.WriteLine("Second Number is greater: " + first);
+                Console.WriteLine("Second Number is greater: " + second);
                 return second;
             }
             else
