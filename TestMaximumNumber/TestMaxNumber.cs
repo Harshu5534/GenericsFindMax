@@ -48,6 +48,26 @@ namespace TestMaximum
             float actual = max.FindMaxFloat(1.2f,6.7f,3.6f);
             Assert.AreEqual(actual, 6.7f);
         }
-
+        [Test]
+        public void GivenStringInput_WhenTestMax_ShouldReturnMaximum()
+        {
+            FindMaximum max = new FindMaximum();
+            string actual = max.FindMaxString("Girish","Golu","Harshal");
+            Assert.AreEqual(actual, "Harshal");
+        }
+        [Test]
+        public void GivenMaxStringPositionOne_WhenTestMax_ShouldReturnMaximum()
+        {
+            FindMaximum max = new FindMaximum();
+            string actual = max.FindMaxString("Harshal","Girish","Golu");
+            Assert.AreEqual(actual, "Harshal");
+        }
+        [Test]
+        public void GivenMaxStringPositionTwo_WhenTestMax_ShouldReturnMaximum()
+        {
+            FindMaximum max = new FindMaximum();
+            string actual = max.FindMaxString("Girish", "Harshal", "Golu");
+            Assert.AreEqual(actual, "Harshal");
+        }
     }
 }
