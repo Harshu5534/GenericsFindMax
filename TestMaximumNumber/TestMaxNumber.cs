@@ -52,22 +52,22 @@ namespace TestMaximum
         public void GivenStringInput_WhenTestMax_ShouldReturnMaximum()
         {
             FindMaximum max = new FindMaximum();
-            string actual = max.FindMaxString("Girish","Golu","Harshal");
-            Assert.AreEqual(actual, "Harshal");
+            string actual = max.FindMaxString("Apple","Peach","Banana");
+            Assert.AreEqual(actual,"Banana");
         }
         [Test]
         public void GivenMaxStringPositionOne_WhenTestMax_ShouldReturnMaximum()
         {
             FindMaximum max = new FindMaximum();
-            string actual = max.FindMaxString("Harshal","Girish","Golu");
-            Assert.AreEqual(actual, "Harshal");
+            string actual = max.FindMaxString("Banana","Apple","Peach");
+            Assert.AreEqual(actual,"Banana");
         }
         [Test]
         public void GivenMaxStringPositionTwo_WhenTestMax_ShouldReturnMaximum()
         {
             FindMaximum max = new FindMaximum();
-            string actual = max.FindMaxString("Girish", "Harshal", "Golu");
-            Assert.AreEqual(actual, "Harshal");
+            string actual = max.FindMaxString("Apple","Banana","Peach");
+            Assert.AreEqual(actual,"Banana");
         }
     }
 }
